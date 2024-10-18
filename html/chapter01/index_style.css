@@ -1,5 +1,5 @@
 h1{
-    display:block;
+    display:none;
 }
 
 p{
@@ -9,7 +9,7 @@ p{
     border : 20px, solid, rgb(57, 43, 43); 
     padding: 20px; 
     border-radius: 20px; 
-    background-color: rgb(0,0,0);
+    background-color: rgb(113,91,91);
 }
 
 div#box{
