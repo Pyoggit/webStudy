@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/01ba7af47f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px dotted black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: beige;
+        }
+
+        div.nav_logo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: baseline;
+            align-items: center;
+
+            font-family: "Kablammo", system-ui, sans-serif;
+            font-optical-sizing: auto;
+            font-size: 24px;
+            font-weight: 900px;
+            font-style: normal;
+            font-variation-settings: "MORF" 0;
+        }
+
+        div.nav_logo:hover {
+            background-color: blueviolet;
+        }
+
+        div.nav_logo i {
+            color: rgb(66, 162, 207);
+            font-size: 32px;
+            margin: 5px;
+        }
+
+
+        ul.nav_menu {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.nav_menu a {
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        ul.nav_menu a:hover {
+            color: aqua;
+            background-color: blueviolet;
+        }
+
+        ul.nav_icons {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul.nav_icons i.igloo {
+            color: blue;
+
+        }
+
+        ul.nav_icons i.snowman {
+            color: red;
+        }
+
+        ul.nav_icons a {
+            border-radius: 50%;
+            font-size: 20px;
+            padding: 8px 10px;
+        }
+
+        ul.nav_icons a:hover {
+            color: aqua;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_logo">
+            <i class="fa-solid fa-snowflake"></i>
+            <a href="#">WEB CODING</a>
+        </div>
+        <ul class="nav_menu">
+            <lI><a href="#">메뉴1</a></lI>
+            <lI><a href="#">메뉴2</a></lI>
+            <lI><a href="#">메뉴3</a></lI>
+            <lI><a href="#">메뉴4</a></lI>
+            <lI><a href="#">메뉴5</a></lI>
+        </ul>
+
+        <ul class="nav_icons">
+            <li><a href="#"><i class="fa-solid fa-igloo igloo"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-snowman snowman"></i></a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
