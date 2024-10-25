@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: white;
     padding: 20px;
 }
 
@@ -23,9 +23,11 @@ thead {
     font-weight: bold;
 }
 
-.title {
+thead th {
     text-align: center;
-    background-color: #e0f7fa;
+}
+
+.title {
     padding: 10px;
     border-bottom: 1px solid skyblue;
 }
@@ -36,8 +38,18 @@ th, td {
     text-align: left;
 }
 
+
 th.title {
-    text-align: right;
+    text-align: center;
+}
+
+td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid skyblue;
+    text-align: left;
 }
 
 td i {
@@ -48,13 +60,17 @@ td i {
 .footer {
     text-align: center;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
-    background-color: skyblue;
+    background-color: #ccc;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
     color: white;
     font-size: 1em;
 }
