@@ -45,8 +45,7 @@ th.title {
 
 td {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
     padding: 10px;
     border: 1px solid skyblue;
     text-align: left;
@@ -57,15 +56,15 @@ td i {
     font-size: 0.9em;
 }
 
-.footer {
+footer {
     text-align: center;
     padding: 10px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
+
 
 button {
     background-color: #ccc;
