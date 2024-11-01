@@ -5,55 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        b {
-            font-size: small;
-            color: red;
-            padding: 10px 10px;
+    <script>
+        function onLoad() {
+            //객체찾기
+            const close = window.document.querySelector("#close");
+            const userid = document.querySelector("#userid");
+            const pwd = document.querySelector("#pwd");
+
+            //이벤트리스너 등록 및 핸들러 처리
+            close.addEventListener("click", () => {
+                //부모창을 찾기
+                const pWin = window.opener;
+                pWin.document.querySelector("#userid").value = userid.value;
+                pWin.document.querySelector("#pwd").value = pwd.value;
+                window.close();
+            });
         }
-    </style>
+    </script>
 </head>
 
-<body>
+<body onload="onLoad();">
     <form action="login.jsp" method="post" name="login">
         <label for="userid">사용자ID</label><br>
         <input type="text" name="userid" id="userid"><span></span><br>
         <label for="pwd">패스워드</label><br>
         <input type="password" name="userpwd" id="pwd"><span></span><br>
-        <button type="button">log in</button>
-
+        <button type="button">전송하기</button>
     </form>
-    <script>
-        //이벤트를 설정할 객체를 찾는다.
-        const btnobj = document.querySelector('[type="button"]');
-        let check = () => {
-            const userid = document.login.userid;
-            const pwd = document.querySelector("#pwd");
-            if (userid.value.length < 8 || userid.value.length > 14) {
-                userid.nextSibling.innerHTML = `<b>8글자 이상 14글자 미만 작성해주세요</b>`;
-                userid.value = " ";
-                userid.focus();
-                return;
-            } else {
-                userid.nextSibling.innerHTML = `<b>성공</b>`;
-            }
-
-            if (pwd.value.length < 8 || pwd.value.length > 12) {
-                pwd.nextSibling.innerHTML = `<b>8글자 이상 14글자 미만 작성해주세요</b>`;
-                pwd.value = " ";
-                pwd.focus();
-                return;
-            } else {
-                pwd.nextSibling.innerHTML = `<b>성공</b>`;
-            }
-            alert("입력 완료 서버 전송.");
-
-        }
-
-        //이벤트를 설정
-        btnobj.addEventListener("click", check);
-
-    </script>
+    <hr>
+    <button type="button" id="close">팝업창 닫기</button>
 </body>
 
 </html>
